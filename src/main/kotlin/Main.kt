@@ -1,3 +1,5 @@
+import kotlin.math.pow
+
 fun main() {
     /*
     O usuário digitará sua idade e o programa
@@ -16,8 +18,15 @@ fun main() {
     */
 
     print("Digite o diâmetro do circulo: ")
-    val diam = readLine()!!.toFloat()
-    println("A área deste circulo é de: ${3.14 *(diam * diam)}")
-    print("O perímetro deste circulo é de: ${2 * 3.14 * diam}")
-    
+    val diam = readLine()!!.toDouble()
+    val raio = diam / 2
+    val pi = 3.14
+    val area = pi * raio.pow(2)
+    val peri = 2 * pi * raio
+
+    println("Para o diâmetro com o valor $diam: ")
+    println("O raio é: $raio")
+    println("A área é $area")
+    println("O perímetro é de $peri")
+
 }
